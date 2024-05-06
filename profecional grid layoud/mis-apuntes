@@ -1,0 +1,278 @@
+Mi resumen de la clase: Tim Berners Lee creó WWW y HTML en 1991: (el tenía un hoja de estilos NO CSS, pero no quería compartirlo ya que pensaba que un feature así tenia que ser NATIVO). 1993:
+•	Viola(navegador), tenía su propio lenguaje de estilos y queria convertirlo en un lenguaje estandara para la web. 1994:
+•	NSCA Mosaic(navegador), tenía a Marc Andreessen como co-creador, les dijo a los desarrolladores que no había forma de trabajar con algo así(CSS). -håkon wium lie: sacó una propuesta para algo así CHSS .
+•	Se dió a la luz presentando dicha propuesta inicial. debatiendo si cualquier usuario pudiera manipular los estilos. 1995:
+•	håkon y Bert Bos: se unen y responder al 1er borrador en la conf de WWW en 1995.(algó que término siendo muy importante fue que sacarón la "H" y término siendo CSS)
+•	Se siguió debatiendo el control del usuario sobre los estílos, esta idea término siendo rechazada.
+•	W3C: saca una junta, ya que era de su interés. 1996:
+•	EL NACIMIENTO DE CSS: La cual término naciendo por recomendación de W3C. Primeros navegadores Compatibles:
+•	Internet Explorer 3
+•	NETSCAPE
+•	OPERA CSS 2: nace en 1998, con correcciones con las limitaciones y el problema de los elementos FLOTANTES.
+Mi resumen de la clase: Tim Berners Lee creó WWW y HTML en 1991: (el tenía un hoja de estilos NO CSS, pero no quería compartirlo ya que pensaba que un feature así tenia que ser NATIVO). 1993:
+•	Viola(navegador), tenía su propio lenguaje de estilos y queria convertirlo en un lenguaje estandara para la web. 1994:
+•	NSCA Mosaic(navegador), tenía a Marc Andreessen como co-creador, les dijo a los desarrolladores que no había forma de trabajar con algo así(CSS). -håkon wium lie: sacó una propuesta para algo así CHSS .
+•	Se dió a la luz presentando dicha propuesta inicial. debatiendo si cualquier usuario pudiera manipular los estilos. 1995:
+•	håkon y Bert Bos: se unen y responder al 1er borrador en la conf de WWW en 1995.(algó que término siendo muy importante fue que sacarón la "H" y término siendo CSS)
+•	Se siguió debatiendo el control del usuario sobre los estílos, esta idea término siendo rechazada.
+•	W3C: saca una junta, ya que era de su interés. 1996:
+•	EL NACIMIENTO DE CSS: La cual término naciendo por recomendación de W3C. Primeros navegadores Compatibles:
+•	Internet Explorer 3
+•	NETSCAPE
+•	OPERA CSS 2: nace en 1998, con correcciones con las limitaciones y el problema de los elementos FLOTANTES.
+
+
+Limitaciones de CSS y el problema de los elementos flotantes
+Ideas/conceptos claves
+columnas falsas es una técnica que hace una ilusión cuando una columna es más pequeña que otra se la rellena de un background de tipo imagen
+Apuntes
+•	Los primeros diseños de CSS eran una mezcla entre elementos flotantes y posicionados
+•	Haciendo que se tengan limitaciones de control
+•	Provocando que la información no se vea uniforme
+•	Existía una frustración por la falta de columnas de altura completa
+•	Para solucionarlo se creó una técnica de columnas falsas
+•	Se empieza hablar de Diseño Responsivo
+•	Ethan Marcotte ⇒ Tecnica de diseño responsivo
+•	@media screen and (max-width: 400px) {
+•	  .figure,
+•	  li#f-mycroft {
+•	    margin-right: 3.317535545023696682%;    /* 21px / 633px */
+•	    width: 48.341232227488151658%;          /* 306px / 633px */
+•	  }  li#f-watson,
+•	  li#f-moriarty {
+•	    margin-right: 0;
+•	  }
+}
+•	Se empieza a trabajar con elementos flotantes
+•	El problema está que solo funciona cuando se calcula con precisión el ancho y si el contenido tiene la misma altura
+•	La solución fue que se comenzó a trabajar con columnas a través de contenedores para cada una y no con elementos independientes
+•	Tambien se comienza a usar display: table que también se pueden utilizar para elementos que no son elementos de tablas
+•	Existen una gran cantidad de técnicas que son simplemente trucos
+•	Por ello CSS se ha visto difícil y frágil porque no había herramientas de diseño
+RESUMEN: En el principio usar CSS implicaba usar trucos, comenzando desde las columnas, columnas de tamaño completo, el diseño responsivo, etc. Era de esta manera debido a que no se tenían muchas herramientas
+
+
+Herramientas que nos han facilitado el camino
+Ideas/conceptos claves
+Post procesadores son herramientas que procesan el CSS y lo transforman en una nueva hoja de CSS que le permiten optimizar y automatizar los estilos para los navegadores actuales
+Apuntes
+•	La comunidad desarrolló herramientas para facilitar el camino como técnicas
+•	Arquitecturas
+•	Es tener una regla general en CSS
+•	Usando sistema de clases como ser BEM
+•	Pre y Post procesadores
+•	Pre procesadores ⇒ Cambia la sintaxis de CSS permitiendo trabajar más rápido
+•	Post procesadores
+•	Diseño de componentes
+•	Ej. Atomic Design
+•	Lo que se busca ya no es trabajar con páginas enteras sino con componentes
+•	Frameworks
+•	Muchos sitios iguales se deben a frameworks como Bootstrap y Foundation
+•	Nos permiten trabajar de una manera sencilla con los estilos
+•	Performance
+•	Es importante revisar cuanto va ser el costo en el navegador
+•	Accesibilidad
+•	Actualmente se busca que todo tipo de personas puedan acceder a nuestros sitios web
+•	Evergreen Browsers
+•	Navegadores compatibles con nuevas características de la web
+
+
+¿CSS Grid es una idea nueva? La evolución de la especificación
+Apuntes
+CSS comenzó como algo muy simple.
+Era solo una forma de crear una vista de un documento en una pantalla pequeña muy simple en ese momento.
+Hace veinte años, las pantallas eran muy pequeñas. Entonces, cuando vimos que podíamos hacer una hoja de estilo para documentos, pensamos: ...
+Bueno, ¿qué más podemos hacer ahora que tenemos un sistema para hacer hojas de estilo?
+•	Cuando comenzaron en CSS pensaron tomar un diseño similar a las revistas
+•	Las imágenes, textos, pie de páginas tenían ciertos lugares
+•	Todo el documento tenía un sentido
+•	Se tenía la idea de un sistema de layout
+•	Microsoft necesitaba urgentemente una herramienta de diseño robusto y flexible para la web si la web iba a ser una opción para el desarrollo de aplicaciones nativas en windows
+•	Hubo 3 ideas fundamentales
+1.	Idea de Microsoft
+2.	Diseño avanzado de Bos
+3.	Adición de líneas de cuadricula de Linss
+•	Antes de que una recomendación candidata (Borrador Final) pueda convertirse en una recomendación propuesta, la W3C necesita ver al menos dos implementaciones independiendientes e interoperables
+•	Hubo un cambio fundamental con CSS Grid
+•	Jen Simmons ⇒ Colocó muchas demostraciones que creó para CSS Grid en la web
+•	Sin el entusiasmo de los desarrolladores, proveedores de navegadores son reacios a gastar dinero para ver si la idea gana terreno
+•	Los navegadores empezaron a sacar su compatible con los navegadores
+RESUMEN: La adopción de CSS Grid fue progresiva, fue algo que se tenía la idea de crear un layout de este tipo. Gracias al gran recibimiento que tuvo los proveedores de navegadores decidieron invertir en esta característica.
+
+¿Qué significa Grid para CSS?
+Apuntes
+•	CSS Grid requiera una forma completamente de pensar sobre el diseño en CSS
+•	Es una de las herramientas de diseño más poderosa inventada para CSS
+•	Es una alternativa más simple a diferencia de técnicas del pasado
+  
+
+•	Table-Cell
+•	Positions
+Es importante conocer las propiedades que tienen estas técnicas para poder posicionar bien.
+En la técnica de Table-Cell tenemos las propiedades de
+•	display: table-cell — Hace que cualquier elemento se comporte como una tabla.
+•	text-align — Estos últimos dos, los vimos en la clase anterior.
+•	vertical-align
+La ultima tecnica a ver es la de Positions, que tiene las siguientes propiedades:
+•	position: relative
+•	position: absolute
+•	top
+•	right
+•	bottom
+•	left
+•	transform: translate ()
+Hay una tabla que coincide con todos los valores de positions, debido a eso podemos ver sus características dependiendo de su valor. Esto tiene una sintaxis donde va primero
+•	Top: Longitud, Porcentaje, Valor por Defecto, Hereda Del Padre
+•	Transform: none, transform-functions, ,initial, inherit
+•	Transform: translate(x.y)
+•	Alignment techniques · table-cell · initial
+•	Alignment techniques · table-cell · final
+•	Alignment techniques · positions · initial
+•	Alignment techniques · positions · final
+
+
+1.	La propiedad writing-mode define si los renglones de texto se disponen horizontal o verticalmente y la dirección en que avanzan los bloques.
+horizontal-tb El contenido fluye horizontalmente de izquierda a derecha y verticalmente de arriba hacia abajo. El próximo renglón horizontal se posiciona debajo del renglón anterior.
+vertical-rl El contenido fluye verticalmente de arriba hacia abajo y horizontalmente de derecha a izquierda. El próximo renglón vertical se posiciona a la izquierda del renglón anterior.
+vertical-lr El contenido fluye verticalmente de arriba hacia abajo y horizontalmente de izquierda a derecha. El próximo renglón vertical se posiciona a la derecha del renglón anterior.
+sideways-rl El contenido fluye verticalmente de arriba hacia abajo y todos los glifos, incluidos aquellos de los sistemas de escritura verticales, se colocan de lado hacia la derecha.
+sideways-lr El contenido fluye verticalmente de arriba hacia abajo y todos los glifos, incluidos aquellos de los sistemas de escritura verticales, se colocan de lado hacia la izquierda.
+2.	Cosas a tener en cuenta a la hora de usar writing mode:
+•	El modo de escritura. -La dirección. -La orientación del texto.
+Para esto hay que ver los elementos bloque y elementos en linea.
+display-block: (horizontal)
+•	Ocupan todo el espacio de su elemento padre (contenedor). -Fuerzan un salto de línea (ocupan todo el ancho disponible). -Respetan el width, el height, el margin-top y el margin-bottom indicados por el usuario. -Algunos son: div, p, h1, h2, h3, h4, h5, h6, hr, ol, ul, table, li.
+display-inline: (vertical) -Son apilables. -No tienen ni margin-top ni margin-bottom (por mucho que se lo indiques en el CSS). -Si tienen margin-left y margin-right. No respetan ni width ni height. -Estas medidas dependerán del tamaño en píxels de su contenido. -Algunos son: a, span, label, strong, br, input, textarea, abbr,
+MODELOS DE CAJA (Físicas - Lógicas)
+________________________________________
+1.	++Propiedades físicas++
+________________________________________
+•	MARGIN: margin-top | Margin-left | Margin-right | Margin-bottom
+•	PADDING: padding-top | paddding-left | padding-right | padding-bottom
+•	BORDER (-size-style-color): border-top | border-left | border-right | border-bottom
+•	POSITIONS top | left | right | bottom.
+________________________________________
+1.	++- Propiedades Lógicas++
+________________________________________
+•	MARGIN: Margin-block-start | Margin-inline-start | Margin-inline-end | Margin-block-end
+•	PADDING padding-block-start | paddding-inline-start | padding-inline-end | padding-block-end
+•	BORDER(-size-style-color): border-block-start | border-inline-start | border-inline-end | border-block-end.
+Grid y las relaciones padre e hijos inmediatos
+Ideas/conceptos claves
+CSS Grid se puede utilizar para lograr muchos diseños diferentes. También se destaca por permitir dividir una página en áreas o regiones principales, por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML.
+Apuntes
+•	Grid nos permite crear rejillas que tenga filas y columnas
+•	En este momento se tiene una mayor complejidad en el diseño web
+•	Siempre se tendrá un Contenedor (padre)
+•	Los items (elementos hijos) serán los que estarán dentro de este contenedor
+•	Los hijos también pueden ser padres
+•	Todos los padres tienen que tener:
+display: grid;
+RESUMEN: Usar CSS Grid consiste en tener un elemento padre el cual se definirá la propiedad display grid, sus elementos hijos serán afectados por esta regla, siendo posicionados según la forma establecida la grilla.
+
+•	Las celdas son cada cuadro de la grilla, como lo son en una tabla, como la de exel.
+•	Las lineas son cada división de las columnas y los row, todas ellas se pueden nombrar.
+•	Un track es prácticamente una columna o un row, y se declara con su grueso.
+•	Un area es la combinación de celdas delimitada por el usuario por sus especificaciones en celdas, líneas y tracks.
+•	axis es la alineación del contenido dentro o items o celdas de nuestra grid
+•	gutters se traduce como canalones, y son los espacios entre celdas. Se parece al margin correspondiente a las o celdas de nuestra grid.
+
+
+display: grid o display: inline-grid?
+Ideas/conceptos claves
+Display ⇒ Desplegar, colocar a la vista, exhibir, lucir, Mostar, presentar
+Outer ⇒ Denota cómo se comporta un elemento en relación a los otros
+Inner ⇒ como se comportan los hijos directos del elemento
+Apuntes
+•	Display ⇒ Define el tipo de visualización de un elemento
+•	Valores:
+•	Inner
+•	Outer
+•	Los valores block e inline definen dos cosas
+•	Valor externo (Outer)
+•	Valor interno (Inner)
+•	Cuando usamos display: grid; estamos diciendo display: block grid;
+•	Es decir que su comportamiento externo sera de tipo bloque
+•	Un elemento que tenga los atributos de bloque puede tener:
+•	Margin y padding
+•	width
+•	height
+•	Si pensamos en display: inline-flex; su relación con otros elementos no sera de bloque sino de línea
+•	Siempre volvemos al flujo normal del documento
+RESUMEN: La diferencia entre grid e inline-grid es el comportamiento externo que tienen con otros elementos, usando grid sera de tipo bloque y usando inline-grid sera de tipo inline
+
+
+
+Alineamiento en el elemento contenedor
+•	Alineamiento ⇒ en donde quiero que estén los elementos de mi grid
+•	Podemos alinear todos los contenedores a una dirección
+•	Tenemos dos Grupos para ordenar por parte del contenedor
+•	Items
+•	justify-items
+•	align-items
+•	place-items
+•	Content
+•	justify-content
+•	align-content
+•	place-content
+•	Propiedades en común:
+•	Justify ⇒ Alineación por dentro de la grid
+•	Inline axis (row axis)
+•	De izquierda a derecha
+•	start
+•	end
+•	Align ⇒ Alinear la Grid en su contenedor
+•	block axis (column axis)
+•	De arriba hacia abajo
+•	start
+•	end
+justify-items
+.container{
+		justify-items: start | end | center | stretch;
+}
+align-items
+.container{
+	align-items: start | end | center | stretch;
+}
+place-items
+•	Es el shorthand para los dos anteriores
+.container{
+	align-items: <alig-items> / <justify-items>;
+}
+justify-content
+.container{
+		/* Parte 1 */
+		justify-content: start | end | center | stretch;
+		/* Parte 2 */
+		justify-content: space-around | space-between | space-evenly;
+}
+Align-content
+.container{
+		/* Parte 1 */
+		align-content: start | end | center | stretch;
+		/* Parte 2 */
+		align-content: space-around | space-between | space-evenly;
+}
+
+
+ Generación automática de tracks
+Ideas/conceptos claves
+Track ⇒ Union de dos o más celdas dentro de una grid
+Apuntes
+•	No todas las grillas tendrán items exactamente contados
+•	No contaras con filas y columnas exactas por que los datos pueden ser dinámicos
+•	Para ello está la grid implícita
+•	Te crea filas o columnas si las necesitas con anchos sin tamaño
+•	Para que se valla ordenando según lleguen nuevos elementos se debe usar esta propiedad
+•	Don especificaremos el tamaño donde agregarlo
+.container {
+	grid-auto-columns: 60px;
+}
+•	También podemos cambiar el orden visual de los elementos hijos
+.container {
+		grid-auto-flow: row | column | row dense | column dense;
+}
+RESUMEN: Debido a que existen casos que nunca sabremos cuantos elementos exactamente tendrá nuestra grilla entonces podemos generarla automáticamente con grillas implícitas.
+
+
+Un pequeño resumen: La función CSS repeat() representa un fragmento repetido de la lista de la pista, permitiendo un gran número de columnas o renglones que exhiben un patrón recurrente para ser escrito de una forma más compacta. | En función Css minmax() el min representa el tamaño mínimo que va a tener cada uno de los elementos de la grid y el max nos indica el valor máximo de los elementos de la grid. Esto nos sirve para que el contenido se vea bien en determinados tamaños. | Con la función de auto-fit() ADAPTA las columnas DISPONIBLES ACTUALMENTE en el espacio expandiéndolas para que ocupen cualquier espacio disponible. El navegador hace eso después de LLENAR ese espacio adicional con columnas adicionales (como con el autocompletar) y luego colapsar las vacías. | Con la función de auto-fill() LLENA la fila con tantas columnas como pueda caber. Por lo tanto, crea columnas implícitas cada vez que cabe una nueva columna, porque está tratando de LLENAR la fila con tantas columnas como sea posible. Las columnas recién agregadas pueden estar vacías, pero seguirán ocupando un espacio designado en la fila. /************ Estas funciones con perfectas para el responsive design.*********/ | La función fit-content() organiza un contenido en especifico el cual lo reserva y el resto seria auto.
